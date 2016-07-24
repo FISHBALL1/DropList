@@ -1,25 +1,136 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4VS-TY-eGW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="7Ed-Og-lK2">
+            <objects>
+                <navigationController id="4VS-TY-eGW" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="675"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MFz-of-ehr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.56862745100000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SJl-gx-dy8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wh1-f7-DOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208.5" y="289.5"/>
+        </scene>
+        <!--点卡类型-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DropList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点卡类型:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajh-0k-euG">
+                                <rect key="frame" x="40" y="234" width="70" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="QHB-ov-uzG"/>
+                                    <constraint firstAttribute="width" constant="70" id="YNI-DN-rmA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-F4-4CE">
+                                <rect key="frame" x="133" y="234" width="61" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="61" id="WE7-ut-wKy"/>
+                                    <constraint firstAttribute="height" constant="25" id="teR-P5-ilR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="网易卡"/>
+                                <connections>
+                                    <segue destination="4PH-nF-ppz" kind="push" id="rAb-XD-R3D"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Agr-F4-4CE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="170" id="Bn7-PB-xSY"/>
+                            <constraint firstItem="Ajh-0k-euG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="170" id="LY6-6y-IXM"/>
+                            <constraint firstItem="Ajh-0k-euG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="i9p-UT-7bY"/>
+                            <constraint firstItem="Agr-F4-4CE" firstAttribute="leading" secondItem="Ajh-0k-euG" secondAttribute="trailing" constant="23" id="sMx-0Z-jWS"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="点卡类型" id="EoT-fA-wjG">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="avO-nS-chR"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="btn" destination="Agr-F4-4CE" id="5a4-BX-fQ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="287.5" y="289.5"/>
+        </scene>
+        <!--选择点卡类型-->
+        <scene sceneID="yNw-PE-Dpk">
+            <objects>
+                <viewController id="4PH-nF-ppz" customClass="MenuViewController" customModule="DropList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rIg-fg-wux"/>
+                        <viewControllerLayoutGuide type="bottom" id="DEN-jw-QS1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TgI-lQ-dyE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-pA-9xM" customClass="DropList" customModule="DropList" customModuleProvider="target">
+                                <rect key="frame" x="159" y="89" width="99" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.56862745100000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="85E-Wt-RZa"/>
+                                    <constraint firstAttribute="height" constant="30" id="eQ1-b5-TQH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="defaultValue" value="请选择"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="default_down"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="中石化加油卡"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="85E-Wt-RZa"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wYb-pA-9xM" secondAttribute="trailing" constant="117" id="N3C-Uw-Qqd"/>
+                            <constraint firstItem="wYb-pA-9xM" firstAttribute="leading" secondItem="TgI-lQ-dyE" secondAttribute="leading" constant="159" id="Suu-nl-qAL"/>
+                            <constraint firstItem="wYb-pA-9xM" firstAttribute="top" secondItem="rIg-fg-wux" secondAttribute="bottom" constant="25" id="hJZ-tQ-hcf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="选择点卡类型" id="k1d-i9-zHG">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="yAq-BA-Joc"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="menu1" destination="wYb-pA-9xM" id="aGB-Yt-D4E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVO-0u-AGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.5" y="281.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="default_down" width="72" height="72"/>
+    </resources>
 </document>

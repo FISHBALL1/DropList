@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  DropList
 //
-//  Created by Mac on 16/7/24.
-//  Copyright © 2016年 北京校酷网络科技有限公司. All rights reserved.
+//  Created by 牛尧 on 16/6/24.
+//  Copyright © 2016年 FISHBALL1. All rights reserved.
 //
 
 import UIKit
